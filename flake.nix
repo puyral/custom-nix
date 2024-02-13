@@ -8,10 +8,11 @@
 
   outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
-      let 
+      let
         pkgs = nixpkgs.legacyPackages.${system};
-        args = inputs // {pkgs = pkgs;};
-        mKpkgs = pkgs.lib.lists.foldl (acc: x: acc // ((import x) args).packages) {};
+        args = inputs // { pkgs = pkgs; };
+        mKpkgs =
+          pkgs.lib.lists.foldl (acc: x: acc // ((import x) args).packages) { };
       in {
         packages = mKpkgs [ ./cvc5.nix ];
         formatter = nixpkgs.legacyPackages.${system}.nixfmt;
