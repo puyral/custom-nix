@@ -11,10 +11,11 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         args = inputs // { pkgs = pkgs; };
-        mKpkgs =
-          pkgs.lib.lists.foldl (acc: x: acc // ((import x) args).packages) { };
+        mKpkgs = builtins.foldl' (acc: x:
+          acc // ((import (./. + ("/packages/" + x + ".nix"))) args).packages)
+          { };
       in {
-        packages = mKpkgs [ ./cvc5.nix ./clocktui.nix ./tclock.nix ];
+        packages = mKpkgs [ "cvc5" "clocktui" "tclock" ];
         formatter = nixpkgs.legacyPackages.${system}.nixfmt;
 
         devShell = pkgs.mkShell { buildInputs = with pkgs; [ nil ]; };
