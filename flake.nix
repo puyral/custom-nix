@@ -10,12 +10,17 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        args = inputs // { pkgs = pkgs; };
+        args = inputs // {
+          pkgs = pkgs;
+          custom-packages = packages;
+        };
         mKpkgs = builtins.foldl' (acc: x:
           acc // ((import (./. + ("/packages/" + x + ".nix"))) args).packages)
           { };
+        packages =
+          mKpkgs [ "cvc5" "clocktui" "tclock" "enblend-enfuse" "hugin" ];
       in {
-        packages = mKpkgs [ "cvc5" "clocktui" "tclock" ];
+        packages = packages;
         formatter = nixpkgs.legacyPackages.${system}.nixfmt;
 
         devShell = pkgs.mkShell { buildInputs = with pkgs; [ nil ]; };
