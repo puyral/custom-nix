@@ -17,8 +17,14 @@
         mKpkgs = builtins.foldl' (acc: x:
           acc // ((import (./. + ("/packages/" + x + ".nix"))) args).packages)
           { };
-        packages =
-          mKpkgs [ "cvc5" "clocktui" "tclock" "enblend-enfuse" "hugin" ];
+        packages = mKpkgs [
+          "cvc5"
+          "clocktui"
+          "tclock"
+          "enblend-enfuse"
+          "hugin"
+          "deepsec"
+        ];
       in {
         packages = packages;
         formatter = nixpkgs.legacyPackages.${system}.nixfmt;
