@@ -1,5 +1,8 @@
 { pkgs, ... }:
-with pkgs; {
+with pkgs;
+if stdenv.isDarwin then {
+  packages = { };
+} else {
   packages.enblend-enfuse = enblend-enfuse.overrideAttrs
     (finalAttrs: previousAttrs: {
 
