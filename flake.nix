@@ -4,13 +4,15 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils = { url = "github:numtide/flake-utils"; };
+    opam-nix = { url = "github:tweag/opam-nix"; };
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
+  outputs = inputs@{ self, nixpkgs, flake-utils, opam-nix, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         args = inputs // {
+          system = system;
           pkgs = pkgs;
           custom-packages = packages;
         };
@@ -24,6 +26,7 @@
           "enblend-enfuse"
           "hugin"
           "deepsec"
+          "squirrel-prover"
         ];
       in {
         packages = packages;
