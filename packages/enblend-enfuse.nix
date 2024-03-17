@@ -13,7 +13,7 @@ if stdenv.isDarwin then {
         ++ lib.optionals stdenv.cc.isClang llmPacakges.openmp
         ++ [ opencl-headers ];
 
-      apps = [{ name = "enblend"; }];
+      # apps = [{ name = "enblend"; }];
 
       # installPhase = ''
       #   install -m0755 -D 
