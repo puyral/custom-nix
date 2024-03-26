@@ -27,6 +27,7 @@
           "hugin"
           "deepsec"
           "squirrel-prover"
+          "vampire"
         ];
 
         mkApp = with builtins;
