@@ -15,8 +15,8 @@ in {
     vampire-master = mkvampire "master" (fetchFromGitHub {
       owner = "vprover";
       repo = "vampire";
-      rev = "1b080631257a403681d1287f87f8d3ac1ee97c63";
-      hash = "sha256-7N2L1embD+ZMJDJkzLwledwKp9g4xmHsyIwDchGls1Q=";
+      rev = "5ad494e781908ce0661b28c9ca39d8c1e7f0918c";
+      hash = "sha256-NHAlPIy33u+TRmTuFoLRlPCvi3g62ilTfJ0wleboMNU=";
     });
 
     vampire-ccsa = mkvampire "ccsa" (fetchFromGitHub {
