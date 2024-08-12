@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, vampire-master-src, ... }:
 with pkgs;
 let
   mkvampire = version: src:
@@ -12,12 +12,7 @@ in {
   packages = rec {
     vampire = vampire-master;
 
-    vampire-master = mkvampire "master" (fetchFromGitHub {
-      owner = "vprover";
-      repo = "vampire";
-      rev = "5ad494e781908ce0661b28c9ca39d8c1e7f0918c";
-      hash = "sha256-NHAlPIy33u+TRmTuFoLRlPCvi3g62ilTfJ0wleboMNU=";
-    });
+    vampire-master = mkvampire "master" vampire-master-src;
 
     vampire-ccsa = mkvampire "ccsa" (fetchFromGitHub {
       owner = "vprover";

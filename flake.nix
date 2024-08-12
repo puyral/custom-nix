@@ -1,10 +1,19 @@
 {
-  description = "cvc5";
+  description = "custom nix";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils = { url = "github:numtide/flake-utils"; };
     opam-nix = { url = "github:tweag/opam-nix"; };
+
+    isw-src = {
+      url = "github:YoyPa/isw";
+      flake = false;
+    };
+    vampire-master-src = {
+      url = "github:vprover/vampire";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, opam-nix, ... }:
@@ -28,6 +37,7 @@
           "deepsec"
           "squirrel-prover"
           "vampire"
+          "isw"
         ];
 
         mkApp = with builtins;
