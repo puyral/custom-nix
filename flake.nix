@@ -14,6 +14,14 @@
       url = "github:vprover/vampire";
       flake = false;
     };
+    cryptovampire-src = {
+      url = "github:SecPriv/CryptoVampire";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    squirrel-prover-src = {
+      url = "github:squirrel-prover/squirrel-prover";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, opam-nix, ... }:
@@ -38,6 +46,7 @@
           "squirrel-prover"
           "vampire"
           "isw"
+          "cryptovampire"
         ];
 
         mkApp = with builtins;
