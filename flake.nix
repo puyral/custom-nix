@@ -22,6 +22,10 @@
       url = "github:squirrel-prover/squirrel-prover";
       flake = false;
     };
+    rnote-src = {
+      url = "github:puyral/rnote/add-block-touch";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, opam-nix, ... }:
@@ -47,6 +51,7 @@
           "vampire"
           "isw"
           "cryptovampire"
+          "rnote"
         ];
 
         mkApp = with builtins;
