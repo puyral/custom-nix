@@ -41,7 +41,7 @@
           acc // ((import (./. + ("/packages/" + x + ".nix"))) args).packages)
           { };
         mpackages = mKpkgs [
-          "cvc5"
+          # "cvc5"
           "clocktui"
           "tclock"
           "enblend-enfuse"
