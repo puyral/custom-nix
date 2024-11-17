@@ -29,7 +29,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, opam-nix, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
+    (flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         args = inputs // {
@@ -78,7 +78,7 @@
 
         devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixd ]; };
 
-      }) // {
+      })) // {
         templates = {
           base = {
             path = ./templates/base;
