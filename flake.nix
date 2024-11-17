@@ -78,11 +78,12 @@
 
         devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixd ]; };
 
+      }) // {
         templates = {
           base = {
             path = ./templates/base;
             description = "a basic template";
           };
         };
-      });
+      };
 }
