@@ -735,11 +735,11 @@
     "rnote-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1728334691,
-        "narHash": "sha256-kHyDqlIbgoOu2y/CO/m0MclFTB9VFmN+hAIAZW0cXCg=",
+        "lastModified": 1731954697,
+        "narHash": "sha256-3gSFvAxeOpVTsn4IWFNIIRhKw/en7J+UE63fqDnGETU=",
         "owner": "puyral",
         "repo": "rnote",
-        "rev": "4d93c4ff8f3da208ec5b164ec23eea015406e7fa",
+        "rev": "d2f8ed5997e1eab297066ff7d86e6006c8a45c3a",
         "type": "github"
       },
       "original": {
