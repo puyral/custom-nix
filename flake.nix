@@ -26,6 +26,10 @@
       url = "github:puyral/rnote/add-block-touch";
       flake = false;
     };
+    zfs-inplace-rebalance-src = {
+      url = "github:markusressel/zfs-inplace-rebalancing";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, flake-utils, opam-nix, ... }:
@@ -52,6 +56,7 @@
           "isw"
           "cryptovampire"
           "rnote"
+          "zfs-inplace-rebalance"
         ];
 
         mkApp = with builtins;

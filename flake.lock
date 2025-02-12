@@ -761,7 +761,8 @@
         "opam-nix": "opam-nix_3",
         "rnote-src": "rnote-src",
         "squirrel-prover-src": "squirrel-prover-src_2",
-        "vampire-master-src": "vampire-master-src_3"
+        "vampire-master-src": "vampire-master-src_3",
+        "zfs-inplace-rebalance-src": "zfs-inplace-rebalance-src"
       }
     },
     "squirrel-prover-src": {
@@ -947,6 +948,22 @@
       "original": {
         "owner": "vprover",
         "repo": "vampire",
+        "type": "github"
+      }
+    },
+    "zfs-inplace-rebalance-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737197292,
+        "narHash": "sha256-n8kPWuANKb17B7TxQRCduCnKRALB4VPb2Z3tFu70k54=",
+        "owner": "markusressel",
+        "repo": "zfs-inplace-rebalancing",
+        "rev": "97d11fdb0b3f1e6bad22f84094e926390fb32db0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "markusressel",
+        "repo": "zfs-inplace-rebalancing",
         "type": "github"
       }
     }
