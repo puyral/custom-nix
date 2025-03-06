@@ -40,6 +40,7 @@ in {
       rev = "8a4dba9";
       hash = "sha256-VIFQykbpa0PqdZUgm9Y+r5Xt9z6h0Tzigq1hPckKwmc=";
     });
+    vampire-official = pkgs.callPackage ./vampire/vampire.nix { };
   };
 
   # see `nurl` to get the fetchfromgithub commands

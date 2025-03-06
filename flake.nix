@@ -3,8 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils = { url = "github:numtide/flake-utils"; };
-    opam-nix = { url = "github:tweag/opam-nix"; };
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    };
+    opam-nix = {
+      url = "github:tweag/opam-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     isw-src = {
       url = "github:YoyPa/isw";
@@ -20,6 +26,11 @@
     };
     squirrel-prover-src = {
       url = "github:squirrel-prover/squirrel-prover";
+      flake = false;
+    };
+
+    squirrel-prover-src-cv = {
+      url = "github:puyral/squirrel-prover?ref=cryptovampire";
       flake = false;
     };
     rnote-src = {
@@ -51,7 +62,7 @@
           "enblend-enfuse"
           "hugin"
           "deepsec"
-          "squirrel-prover"
+          # "squirrel-prover"
           "vampire"
           "isw"
           "cryptovampire"
@@ -81,7 +92,9 @@
 
         formatter = nixpkgs.legacyPackages.${system}.nixfmt;
 
-        devShell = pkgs.mkShell { buildInputs = with pkgs; [ nixd ]; };
+        devShell = pkgs.mkShell {
+          buildInputs = with pkgs; [ nixd ] ++ lib.optional stdenv.isDarwin git;
+        };
 
       })) // {
         templates = {
