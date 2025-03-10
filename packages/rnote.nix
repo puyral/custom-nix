@@ -1,17 +1,17 @@
-{ rnote-src, pkgs, ... }: {
+{ rnote-src, pkgs, fenix, system, ... }:
+let
+  toolchain = fenix.packages.${system}.stable.toolchain;
+  # rustPlatform = pkgs.rustPlatform;
+  rustPlatform = pkgs.makeRustPlatform {
+    cargo = toolchain;
+    rustc = toolchain;
+  };
+
+in {
   packages = rec {
-    rnote = pkgs.rnote.overrideAttrs (finalAttrs: previousAttrs: rec {
+    rnote = pkgs.callPackage ./rnote {
+      inherit rustPlatform;
       src = rnote-src;
-      cargoDeps = pkgs.rustPlatform.importCargoLock {
-        lockFile = "${src}/Cargo.lock";
-        outputHashes = {
-          "ink-stroke-modeler-rs-0.1.0" =
-            "sha256-B6lT6qSOIHxqBpKTE4nO2+Xs9KF7JLVRUHOkYp8Sl+M=";
-          #"piet-0.6.2" = "sha256-o1/MDvE0eHUaebkWbvQ0JRytMjvyvWLRmc2QtEeb+2I=";
-          #"points_on_curve-0.5.0" =
-          #  "sha256-1mmxG8oDdQ3KQtvIPT4TPgz+akdFah0uH6b1oJ4ASD0=";
-        };
-      };
-    });
+    };
   };
 }

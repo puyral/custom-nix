@@ -11,6 +11,10 @@
       url = "github:tweag/opam-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     isw-src = {
       url = "github:YoyPa/isw";
