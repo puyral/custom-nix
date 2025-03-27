@@ -57,9 +57,9 @@
           custom-packages = mpackages;
         };
         mKpkgs = builtins.foldl' (acc: x:
-          acc // ((import (./. + ("/packages/" + x + ".nix"))) args).packages)
+          acc // ((import (./. + ("/apackages/" + x + ".nix"))) args).packages)
           { };
-        mpackages = mKpkgs [
+        mpackages = (mKpkgs [
           "cvc5"
           "clocktui"
           "tclock"
@@ -72,7 +72,12 @@
           "cryptovampire"
           "rnote"
           "zfs-inplace-rebalance"
-        ];
+        ]) // by_callpkgs;
+
+        by_callpkgs = with builtins; (let 
+        dir = ./packages;
+        in
+          mapAttrs (name: _: pkgs.callPackage "${dir}/${name}" args) (readDir dir));
 
         mkApp = with builtins;
           package:
