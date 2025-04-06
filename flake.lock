@@ -513,11 +513,11 @@
     "rnote-src_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1741639227,
-        "narHash": "sha256-gU/0JHCCguuuvbBdzsX4QD1sjRczb4cyQ/WY5+mw+4s=",
+        "lastModified": 1743966725,
+        "narHash": "sha256-zLO9HCMddWKl9IrDncPCvaE/R654kWb24gTODBAOZQs=",
         "owner": "puyral",
         "repo": "rnote",
-        "rev": "33fdab032faaf3bee41e9ed65e286f04988a00b0",
+        "rev": "4e260c2c848ff8ce69bee5d4a1d5c9b71a2f0eae",
         "type": "github"
       },
       "original": {

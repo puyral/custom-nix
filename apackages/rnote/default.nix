@@ -35,6 +35,7 @@ stdenv.mkDerivation rec {
     outputHashes = {
       "ink-stroke-modeler-rs-0.1.0" =
         "sha256-B6lT6qSOIHxqBpKTE4nO2+Xs9KF7JLVRUHOkYp8Sl+M=";
+      "poppler-rs-0.24.1"= "sha256-KlMAJa1RBL125qeaLc3aGLFW3WArikMMawtNWdmhhKQ=";
     };
   };
 
