@@ -11,11 +11,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1742853355,
-        "narHash": "sha256-eYkjeqrIo+Uchd7f2mstTdqzMHkpCbuV571f8HUhpw4=",
+        "lastModified": 1758536761,
+        "narHash": "sha256-NUAl6t7cMFpKozmByby8D3PzYUeYXoKUAcVhjhM56ME=",
         "owner": "SecPriv",
         "repo": "CryptoVampire",
-        "rev": "10e1801979f58b409510279bcfaf0a3021016156",
+        "rev": "7882342461a0810ba1d3e26f3ddf8dc2efc0b81f",
         "type": "github"
       },
       "original": {
@@ -63,11 +63,11 @@
         "rust-analyzer-src": "rust-analyzer-src"
       },
       "locked": {
-        "lastModified": 1752302273,
-        "narHash": "sha256-xXZ0JkrpcpSgeuhezJZV2T+7gHcYCo39ogc55c4FyRw=",
+        "lastModified": 1770447430,
+        "narHash": "sha256-smrRbWhvJF6BATB6pXbD8Cp04HRrVcYQkXqOhUF81nk=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "910743660778c55917959d64980bf046f52142ef",
+        "rev": "e1b28f6ca0d1722edceec1f2f3501558988d1aed",
         "type": "github"
       },
       "original": {
@@ -321,11 +321,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1751984180,
-        "narHash": "sha256-LwWRsENAZJKUdD3SpLluwDmdXY9F45ZEgCb0X+xgOL0=",
+        "lastModified": 1770197578,
+        "narHash": "sha256-AYqlWrX09+HvGs8zM6ebZ1pwUqjkfpnv8mewYwAo+iM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+        "rev": "00c21e4c93d963c50d4c0c89bfa84ed6e0694df2",
         "type": "github"
       },
       "original": {
@@ -372,11 +372,11 @@
         "opam2json": "opam2json_2"
       },
       "locked": {
-        "lastModified": 1752157018,
-        "narHash": "sha256-V3TI6f3STTr2C37+/wj84xaqPDzbJ/b7jFoiVZNxIEc=",
+        "lastModified": 1769900026,
+        "narHash": "sha256-O1cK8GVRNDKvAXU0mZjqpmftRnAeyDgyP7lf/3P/Pdg=",
         "owner": "tweag",
         "repo": "opam-nix",
-        "rev": "53a188543aa45a56452655f1b929cdcd4587ec1a",
+        "rev": "1f373ef8c4cc1237a74c681b47bbdbdf7ab185a6",
         "type": "github"
       },
       "original": {
@@ -436,11 +436,11 @@
     "opam-repository_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1751808506,
-        "narHash": "sha256-H0WN/VhgaI6GLYmLAThoRcsf4XwnMNEBsz/w8FbLSrU=",
+        "lastModified": 1759971927,
+        "narHash": "sha256-aUZWd0KOpEnioBwqlwRU40rUFAqT3RTlojXt2oI3omY=",
         "owner": "ocaml",
         "repo": "opam-repository",
-        "rev": "bd82a8dde3f816d8b45ecbe005ac1f8e7f25c207",
+        "rev": "551314ad1550478ec6be39bb0eaadd2569190464",
         "type": "github"
       },
       "original": {
@@ -514,11 +514,11 @@
     "rnote-src_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1752313479,
-        "narHash": "sha256-uQsau0D1o8SMho5m8by40J+vnjmF+U7UvB/KTPfystE=",
+        "lastModified": 1752318812,
+        "narHash": "sha256-mPmtkiCRn1p2KE1wcYkezXnST8GaA5hKZxhIYqy+6d8=",
         "owner": "puyral",
         "repo": "rnote",
-        "rev": "72247cd2f05697856a5edf3edc29d5bd6bd9122a",
+        "rev": "da7798694f5242b7c079ac90973310c98513eba9",
         "type": "github"
       },
       "original": {
@@ -539,6 +539,7 @@
         "rnote-src": "rnote-src_2",
         "squirrel-prover-src": "squirrel-prover-src_2",
         "squirrel-prover-src-cv": "squirrel-prover-src-cv",
+        "treefmt-nix": "treefmt-nix_2",
         "vampire-master-src": "vampire-master-src_2",
         "zfs-inplace-rebalance-src": "zfs-inplace-rebalance-src"
       }
@@ -546,11 +547,11 @@
     "rust-analyzer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1752262373,
-        "narHash": "sha256-eRDeo/hVnf958ESWy8qV/jZj4ZRbFXsmMdw1cnI57dE=",
+        "lastModified": 1770290336,
+        "narHash": "sha256-rJ79U68ZLjCSg1Qq+63aBXi//W7blaKiYq9NnfeTboA=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "a489123e806ceadfdc5568bf9609b0468f5a2e6a",
+        "rev": "d2a00da09293267e5be2efb216698762929d7140",
         "type": "github"
       },
       "original": {
@@ -597,11 +598,11 @@
     "squirrel-prover-src_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1749135471,
-        "narHash": "sha256-UCs3EDJTxo8Agh0ZFieLvixy4FkUbOgIwl4VNPGpBKo=",
+        "lastModified": 1760089888,
+        "narHash": "sha256-octGvNHNyD6XLvnqL4qwKhXURGik4THAsF2FNTHtMl4=",
         "owner": "squirrel-prover",
         "repo": "squirrel-prover",
-        "rev": "6c4181a5d04c59ffb169c304ba1699d24be7622b",
+        "rev": "58ea3d1c2db38ce9639dd1c17c9885c483c56472",
         "type": "github"
       },
       "original": {
@@ -736,6 +737,26 @@
         "type": "github"
       }
     },
+    "treefmt-nix_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770228511,
+        "narHash": "sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD+Fyxk=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "337a4fe074be1042a35086f15481d763b8ddc0e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
     "vampire-master-src": {
       "flake": false,
       "locked": {
@@ -755,11 +776,11 @@
     "vampire-master-src_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1752230294,
-        "narHash": "sha256-hk5zWsSR1mD2Y9bWz7mLrwDqAt4jp9PrIOxioeiUfRs=",
+        "lastModified": 1769514379,
+        "narHash": "sha256-+oPYrYEY2+YtxBZukLb4oIpyKYwOSiEREX/EbZPVArg=",
         "owner": "vprover",
         "repo": "vampire",
-        "rev": "af5f700787a9dbeab7d22e8ec347310b82e803bb",
+        "rev": "ec9595e79e4890d82cf090223c6cda5b73805bbc",
         "type": "github"
       },
       "original": {
@@ -771,11 +792,11 @@
     "zfs-inplace-rebalance-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1744744342,
-        "narHash": "sha256-iu4oP6Jkm+DJe4iwFA4FjMUzDkAr3wBNZ9AIWA0FXOw=",
+        "lastModified": 1764018042,
+        "narHash": "sha256-JCk01T6lDsbdfhvYbatiyTPwZAsILYfzlKn2bqFqacI=",
         "owner": "markusressel",
         "repo": "zfs-inplace-rebalancing",
-        "rev": "b78835860050939075de07026c7f01119bb89146",
+        "rev": "970c3845cd750ebdaa3bcba6f3ac7dd4e7761e0b",
         "type": "github"
       },
       "original": {

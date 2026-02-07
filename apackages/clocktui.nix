@@ -7,7 +7,8 @@ let
     hash = "sha256-B04goFf6xFVEcInOQEhGJFruql2FF3F3vcxUljOvNfU=";
   };
   manifest = (pkgs.lib.importTOML "${src}/Cargo.toml").package;
-in {
+in
+{
   packages.clocktui = pkgs.rustPlatform.buildRustPackage {
     name = manifest.name;
     version = manifest.version;

@@ -31,7 +31,9 @@
         src = ./.;
       in
       {
-        devShells.default = pkgs.callPackage ./shell.nix {extra = pkgs.lib.optional pkgs.stdenv.isDarwin pkgs.git; };
+        devShells.default = pkgs.callPackage ./shell.nix {
+          extra = pkgs.lib.optional pkgs.stdenv.isDarwin pkgs.git;
+        };
         formatter = treefmtEval.config.build.wrapper;
       }
     );

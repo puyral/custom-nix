@@ -1,4 +1,11 @@
-{ lib, stdenv, fetchFromGitHub, fetchpatch, z3_4_12, zlib, }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  z3_4_12,
+  zlib,
+}:
 
 stdenv.mkDerivation rec {
   pname = "vampire";
@@ -11,9 +18,16 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-NHAlPIy33u+TRmTuFoLRlPCvi3g62ilTfJ0wleboMNU=";
   };
 
-  buildInputs = [ z3_4_12 zlib ];
+  buildInputs = [
+    z3_4_12
+    zlib
+  ];
 
-  makeFlags = [ "vampire_z3_rel" "CC:=$(CC)" "CXX:=$(CXX)" ];
+  makeFlags = [
+    "vampire_z3_rel"
+    "CC:=$(CC)"
+    "CXX:=$(CXX)"
+  ];
 
   # patches = [
   #   # https://github.com/vprover/vampire/pull/54

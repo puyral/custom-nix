@@ -8,14 +8,20 @@ let
   };
   path = "${src}/clock-tui";
   manifest = (pkgs.lib.importTOML "${path}/Cargo.toml");
-in {
-  packages = builtins.listToAttrs (builtins.map ({ name, ... }: {
-    name = name;
-    value = pkgs.rustPlatform.buildRustPackage {
-      name = name;
-      version = manifest.package.version;
-      cargoLock.lockFile = "${src}/Cargo.lock";
-      src = pkgs.lib.cleanSource src;
-    };
-  }) manifest.bin);
+in
+{
+  packages = builtins.listToAttrs (
+    builtins.map (
+      { name, ... }:
+      {
+        name = name;
+        value = pkgs.rustPlatform.buildRustPackage {
+          name = name;
+          version = manifest.package.version;
+          cargoLock.lockFile = "${src}/Cargo.lock";
+          src = pkgs.lib.cleanSource src;
+        };
+      }
+    ) manifest.bin
+  );
 }

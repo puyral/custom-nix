@@ -1,7 +1,13 @@
 { pkgs, isw-src, ... }:
 
 let
-  isw = { lib, stdenv, python3, coreutils }:
+  isw =
+    {
+      lib,
+      stdenv,
+      python3,
+      coreutils,
+    }:
 
     stdenv.mkDerivation rec {
       pname = "isw";
@@ -10,7 +16,10 @@ let
 
       src = isw-src;
 
-      buildInputs = [ python3 coreutils ];
+      buildInputs = [
+        python3
+        coreutils
+      ];
 
       dontBuild = true;
       dontConfigure = true;
@@ -39,8 +48,12 @@ let
         maintainers = with maintainers; [ ];
       };
     };
-in if pkgs.stdenv.isDarwin then {
-  packages = { };
-} else {
-  packages.isw = pkgs.callPackage isw { };
-}
+in
+if pkgs.stdenv.isDarwin then
+  {
+    packages = { };
+  }
+else
+  {
+    packages.isw = pkgs.callPackage isw { };
+  }

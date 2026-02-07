@@ -1,4 +1,10 @@
-{ rnote-src, pkgs, fenix, system, ... }:
+{
+  rnote-src,
+  pkgs,
+  fenix,
+  system,
+  ...
+}:
 let
   toolchain = fenix.packages.${system}.stable.toolchain;
   # rustPlatform = pkgs.rustPlatform;
@@ -7,7 +13,8 @@ let
     rustc = toolchain;
   };
 
-in {
+in
+{
   packages = rec {
     rnote = pkgs.callPackage ./rnote {
       inherit rustPlatform;

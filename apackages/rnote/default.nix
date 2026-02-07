@@ -13,10 +13,33 @@
 #   };
 # })
 
-{ lib, stdenv, fetchFromGitHub, alsa-lib, appstream, appstream-glib, cargo
-, cmake, desktop-file-utils, dos2unix, glib, gst_all_1, gtk4, libadwaita
-, libxml2, meson, ninja, pkg-config, poppler, python3, rustPlatform, rustc
-, shared-mime-info, wrapGAppsHook4, src }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  alsa-lib,
+  appstream,
+  appstream-glib,
+  cargo,
+  cmake,
+  desktop-file-utils,
+  dos2unix,
+  glib,
+  gst_all_1,
+  gtk4,
+  libadwaita,
+  libxml2,
+  meson,
+  ninja,
+  pkg-config,
+  poppler,
+  python3,
+  rustPlatform,
+  rustc,
+  shared-mime-info,
+  wrapGAppsHook4,
+  src,
+}:
 
 stdenv.mkDerivation rec {
   inherit src;
@@ -33,9 +56,8 @@ stdenv.mkDerivation rec {
   cargoDeps = rustPlatform.importCargoLock {
     lockFile = "${src}/Cargo.lock";
     outputHashes = {
-      "ink-stroke-modeler-rs-0.1.0" =
-        "sha256-B6lT6qSOIHxqBpKTE4nO2+Xs9KF7JLVRUHOkYp8Sl+M=";
-      "poppler-rs-0.24.1"= "sha256-KlMAJa1RBL125qeaLc3aGLFW3WArikMMawtNWdmhhKQ=";
+      "ink-stroke-modeler-rs-0.1.0" = "sha256-B6lT6qSOIHxqBpKTE4nO2+Xs9KF7JLVRUHOkYp8Sl+M=";
+      "poppler-rs-0.24.1" = "sha256-KlMAJa1RBL125qeaLc3aGLFW3WArikMMawtNWdmhhKQ=";
     };
   };
 
@@ -60,9 +82,16 @@ stdenv.mkDerivation rec {
 
   mesonFlags = [ (lib.mesonBool "cli" true) ];
 
-  buildInputs =
-    [ appstream glib gst_all_1.gstreamer gtk4 libadwaita libxml2 poppler ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
+  buildInputs = [
+    appstream
+    glib
+    gst_all_1.gstreamer
+    gtk4
+    libadwaita
+    libxml2
+    poppler
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
 
   postPatch = ''
     chmod +x build-aux/*.py
@@ -78,7 +107,11 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/flxzt/rnote/releases/tag/${src.rev}";
     description = "Simple drawing application to create handwritten notes";
     license = licenses.gpl3Plus;
-    maintainers = with maintainers; [ dotlambda gepbird yrd ];
+    maintainers = with maintainers; [
+      dotlambda
+      gepbird
+      yrd
+    ];
     platforms = platforms.unix;
   };
 }

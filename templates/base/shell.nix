@@ -1,11 +1,12 @@
 {
   pkgs ? import <nixpkgs> { },
-  extra ? []
+  extra ? [ ],
 }:
 
 with pkgs;
 mkShell {
   buildInputs = [
     nixd
-  ] ++ extra;
+  ]
+  ++ extra;
 }

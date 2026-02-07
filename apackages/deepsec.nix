@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   packages = rec {
     deepsec = pkgs.stdenv.mkDerivation rec {
       pname = "deepsec";
@@ -9,7 +10,11 @@
         rev = version;
         hash = "sha256-adjDnvxhTeKRq1P14dC77zjhmCLVLkGMc4RzIgnR/Zo=";
       };
-      nativeBuildInputs = with pkgs.ocamlPackages; [ ocaml findlib ocamlbuild ];
+      nativeBuildInputs = with pkgs.ocamlPackages; [
+        ocaml
+        findlib
+        ocamlbuild
+      ];
       installPhase = ''
         runHook preInstall
         install -D -t $out/bin deepsec deepsec_api deepsec_worker
