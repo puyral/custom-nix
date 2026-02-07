@@ -248,6 +248,22 @@
         "type": "github"
       }
     },
+    "kodi-nfo-generator-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768595289,
+        "narHash": "sha256-/b/OXI8WMxiCj9KMCNspFd14dRTMMnoj3zF67A6UgpY=",
+        "owner": "fracpete",
+        "repo": "kodi-nfo-generator",
+        "rev": "82a07a4bf18f3befe07d61e523eaa337f2e60c41",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fracpete",
+        "repo": "kodi-nfo-generator",
+        "type": "github"
+      }
+    },
     "mirage-opam-overlays": {
       "flake": false,
       "locked": {
@@ -534,6 +550,7 @@
         "fenix": "fenix",
         "flake-utils": "flake-utils_5",
         "isw-src": "isw-src_2",
+        "kodi-nfo-generator-src": "kodi-nfo-generator-src",
         "nixpkgs": "nixpkgs_2",
         "opam-nix": "opam-nix_2",
         "rnote-src": "rnote-src_2",

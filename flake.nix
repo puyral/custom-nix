@@ -15,6 +15,10 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     isw-src = {
       url = "github:YoyPa/isw";
@@ -45,10 +49,9 @@
       url = "github:markusressel/zfs-inplace-rebalancing";
       flake = false;
     };
-
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+    kodi-nfo-generator-src = {
+      url = "github:fracpete/kodi-nfo-generator";
+      flake = false;
     };
   };
 
